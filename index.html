@@ -1,1 +1,224 @@
-Welcome to the personal page of Mihai Nicola
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mihai Nicola</title>
+  <meta name="description" content="Personal academic webpage of Mihai Nicola." />
+  <style>
+    :root{
+      --text:#111;
+      --muted:#555;
+      --border:#e6e6e6;
+      --bg:#fff;
+      --link:#0b57d0;
+    }
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    .wrap{
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    header{
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 22px;
+    }
+    h1{
+      font-size: 2rem;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .top{
+      display:flex;
+      gap: 18px;
+      align-items:flex-start;
+      flex-wrap: wrap;
+    }
+    .photo{
+      width: 160px;
+      flex: 0 0 160px;
+    }
+    .photo img{
+      width: 160px;
+      height: 160px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      display:block;
+      background:#fafafa;
+    }
+    .links{
+      margin-top: 10px;
+      display:flex;
+      flex-direction:column;
+      gap: 6px;
+      font-size: 0.98rem;
+    }
+    .links a{
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links a:hover{ text-decoration: underline; }
+
+    .meta{
+      flex: 1 1 320px;
+      min-width: 260px;
+    }
+    .meta p{
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    nav{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      margin-top: 2px;
+    }
+    nav a{
+      color: var(--link);
+      text-decoration:none;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background:#fff;
+    }
+    nav a:hover{ text-decoration: underline; }
+
+    section{
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type{ border-bottom: none; }
+    h2{
+      font-size: 1.25rem;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+    ul{
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+    li{ margin: 8px 0; }
+    .muted{ color: var(--muted); }
+
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Make anchors scroll nicely under browser UI */
+    html { scroll-behavior: smooth; }
+    section { scroll-margin-top: 18px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Your Name</h1>
+
+      <div class="top">
+        <div class="photo">
+          <!-- Put your headshot in the same folder and name it your-photo.jpg,
+               or replace src with a URL. -->
+          <img src="your-photo.jpg" alt="Photo of Mihai Nicola" />
+
+          <div class="links">
+            <a href="cv.pdf">CV (PDF)</a>
+            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+        </div>
+
+        <div class="meta">
+          <!-- Optional one-liner + affiliation/contact -->
+          <p class="muted">
+            PhD Student • Programming Languages / Formal Methods<br/>
+            Your University • Your City, Country
+          </p>
+
+          <nav aria-label="Page sections">
+            <a href="#about">About me</a>
+            <a href="#pubs">Publications</a>
+            <a href="#activities">Activities</a>
+            <a href="#misc">Miscellaneous</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About me</h2>
+        <p>
+          Write a short paragraph about your research interests, what you work on,
+          and what kinds of problems you care about. Keep it readable and specific.
+        </p>
+        <p class="muted">
+          Keywords: verification, concurrency, program analysis, semantics, etc.
+        </p>
+      </section>
+
+      <section id="pubs">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            <strong>Paper Title</strong>. Your Name, Coauthor, Coauthor.
+            <em>Venue</em>, Year.
+            <span class="muted">[<a href="#" target="_blank" rel="noopener">PDF</a>]
+            [<a href="#" target="_blank" rel="noopener">DOI</a>]</span>
+          </li>
+          <li>
+            <strong>Another Paper Title</strong>. Your Name, Coauthor.
+            <em>Venue</em>, Year.
+            <span class="muted">[<a href="#" target="_blank" rel="noopener">arXiv</a>]</span>
+          </li>
+        </ul>
+        <p class="muted">
+          Tip: keep each entry consistent; include PDF/DOI/arXiv links when available.
+        </p>
+      </section>
+
+      <section id="activities">
+        <h2>Activities</h2>
+        <ul>
+          <li>Talk: “Title”, Event / Seminar, Month Year.</li>
+          <li>Service: Artifact evaluation, reviewing, program committee, etc.</li>
+          <li>Workshops / Summer schools: Name, Year.</li>
+        </ul>
+      </section>
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <ul>
+          <li>Teaching: Course, term, role.</li>
+          <li>Open-source: Project link, short description.</li>
+          <li>Other: hobbies, notes, or lightweight personal items.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Your Name</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
