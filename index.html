@@ -121,7 +121,13 @@
 	/* display:block;  */
 	/* background:#fafafa; */ 
     }
-    
+
+    @media only screen and (max-width: 720px) {
+	img.photo {
+	    width: 120px;
+	    height: 120px;
+	}
+    }
   </style>
 </head>
 
@@ -146,7 +152,7 @@
                    or replace src with a URL. -->
               <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-thumbnail float-start photo" />
             </div>
-            <div class="links">
+            <div class="col-12 links">
               <a href="cv.pdf">CV</a>
               <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" rel="noopener">ORCID</a>
               <a href="https://scholar.google.com/citations?user=-IU5sTgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
