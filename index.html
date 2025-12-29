@@ -110,43 +110,54 @@
   <!--   .main-nav a:hover{ -->
   <!--     text-decoration: underline; -->
   <!--   } -->
-  <!-- </style> -->
+    <!-- </style> -->
+  <style>
+    img.photo {
+	width: 230px; 
+	height: 230px; 
+	/* border-radius: 14px;  */
+	object-fit: cover;
+	/* border: 1px solid var(--border);  */
+	/* display:block;  */
+	/* background:#fafafa; */ 
+  }
+  </style>
 </head>
 
 <body>
   
   <header>
-    <div class="container">
+    <div class="container-lg p-3">
       <div class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
 	<h1 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Mihai Nicola</h1>
       </div>
     </div>
   </header>
-  
-    <main>
-      <div class="container">
+ 
+  <main>
+    <div class="container-lg p-3">
       <!-- ABOUT + PHOTO (side-by-side on md+, stacked on small screens) -->
       <section id="about">
         <div class="row g-3 align-items-start">
-          <div class="col-12 col-md-3 d-flex flex-column align-items-start">
-            <div class="img-fluid mb-2">
+          <div class="col-auto">
+            <div class="mb-2">
               <!-- Put your headshot in the same folder and name it your-photo.jpg,
                    or replace src with a URL. -->
-              <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-fluid rounded" />
+              <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-thumbnail float-start photo" />
             </div>
             <div class="links">
-              <a href="cv.pdf">CV (PDF)</a>
+              <a href="cv.pdf">CV</a>
               <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" rel="noopener">ORCID</a>
               <a href="https://scholar.google.com/citations?user=-IU5sTgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
             </div>
           </div>
 
-          <div class="col-12 col-md-9">
+          <div class="col">
             <h2 class="h3">About me</h2>
-            <p class="lead">
+            <p class="fs-5">
               I am 5th year PhD student at <a href="https://www.stevens.edu/" target="_blank">Stevens Institute of Technology</a>, advised by <a href="https://www.erickoskinen.com/" target="_blank">Eric Koskinen</a> and <a href="https://www.stevens.edu/profile/tbrenna5" target="_blank">Tegan Brennan</a>. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
             </p>
-            <p class="lead">
+            <p class="fs-5">
               Before beginning my PhD, I spent time as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
             </p>
           </div>
