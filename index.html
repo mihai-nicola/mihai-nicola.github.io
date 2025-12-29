@@ -124,8 +124,11 @@
 
     @media only screen and (max-width: 720px) {
 	img.photo {
-	    width: 120px;
-	    height: 120px;
+	    width: 100px;
+	    height: 100px;
+	}
+	.links {
+	    width: 100px;
 	}
     }
   </style>
@@ -147,12 +150,12 @@
       <section id="about">
         <div class="row g-3 align-items-start">
           <div class="col-auto">
-            <div class="mb-2">
+            <div class="mb-2 clearfix">
               <!-- Put your headshot in the same folder and name it your-photo.jpg,
                    or replace src with a URL. -->
               <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-thumbnail float-start photo" />
             </div>
-            <div class="col-12 links">
+            <div class="links clearfix">
               <a href="cv.pdf">CV</a>
               <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" rel="noopener">ORCID</a>
               <a href="https://scholar.google.com/citations?user=-IU5sTgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
