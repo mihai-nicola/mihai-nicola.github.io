@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mihai Nicola</title>
   <meta name="description" content="Personal academic webpage of Mihai Nicola." />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
   <style>
     :root{
       --text:#111;
@@ -27,31 +36,19 @@
       padding: 28px 18px 60px;
     }
     header{
-      display:flex;
-      flex-direction:column;
-      gap: 14px;
       padding-bottom: 18px;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 22px;
+      margin-bottom: 12px;
     }
     h1{
       font-size: 2rem;
       margin: 0;
       letter-spacing: -0.02em;
     }
-    .top{
-      display:flex;
-      gap: 18px;
-      align-items:flex-start;
-      flex-wrap: wrap;
-    }
-    .photo{
-      width: 160px;
-      flex: 0 0 160px;
-    }
+
     .photo img{
-      width: 160px;
-      height: 160px;
+      width: 200px;
+      height: 200px;
       border-radius: 14px;
       object-fit: cover;
       border: 1px solid var(--border);
@@ -71,31 +68,7 @@
     }
     .links a:hover{ text-decoration: underline; }
 
-    .meta{
-      flex: 1 1 320px;
-      min-width: 260px;
-    }
-    .meta p{
-      margin: 6px 0 0;
-      color: var(--muted);
-    }
-
-    nav{
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      font-size: 0.95rem;
-      margin-top: 2px;
-    }
-    nav a{
-      color: var(--link);
-      text-decoration:none;
-      padding: 6px 10px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
-    nav a:hover{ text-decoration: underline; }
+    .muted{ color: var(--muted); }
 
     section{
       padding: 18px 0;
@@ -112,7 +85,6 @@
       padding-left: 18px;
     }
     li{ margin: 8px 0; }
-    .muted{ color: var(--muted); }
 
     footer{
       margin-top: 18px;
@@ -123,68 +95,91 @@
     /* Make anchors scroll nicely under browser UI */
     html { scroll-behavior: smooth; }
     section { scroll-margin-top: 18px; }
+
+    /* Simple pill-style nav buttons */
+    .main-nav a{
+      color: var(--link);
+      text-decoration:none;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background:#fff;
+      font-size: 0.95rem;
+      display:inline-block;
+    }
+    .main-nav a:hover{
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
     <header>
-      <h1>Mihai Nicola</h1>
-
-      <div class="top">
-        <div class="photo">
-          <!-- Put your headshot in the same folder and name it your-photo.jpg,
-               or replace src with a URL. -->
-          <img src="pics/mihai-nicola2.jpg" alt="Photo of Mihai Nicola" />
-
-          <div class="links">
-            <a href="cv.pdf">CV (PDF)</a>
-            <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" rel="noopener">ORCID</a>
-            <a href="https://scholar.google.com/citations?user=-IU5sTgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-          </div>
-        </div>
-
-        <div class="meta">
-          <!-- Optional one-liner + affiliation/contact -->
-          <p class="muted">
-            PhD Student • Programming Languages / Formal Methods<br/>
-            Stevens Institute of Technology
-          </p>
-
-          <nav aria-label="Page sections">
-            <a href="#about">About me</a>
-            <a href="#pubs">Publications</a>
-            <a href="#activities">Activities</a>
-            <a href="#misc">Miscellaneous</a>
-          </nav>
-        </div>
-      </div>
+      <h1 class="mb-2">Mihai Nicola</h1>
+      <p class="muted mb-0">
+        PhD Student • Programming Languages / Formal Methods<br/>
+        Stevens Institute of Technology
+      </p>
     </header>
 
     <main>
+      <!-- ABOUT + PHOTO (side-by-side on md+, stacked on small screens) -->
       <section id="about">
-        <h2>About me</h2>
-        <p>
-	  I am a PhD candidate at Stevens Institute of Technology, advised by Eric Koskinen and Tegan Brennan. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
-	</p>
-	<p>
-Before beginning my PhD, I spent a decade as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
-        </p>
+        <div class="row g-3 align-items-start">
+          <div class="col-12 col-md-4 d-flex flex-column align-items-start">
+            <div class="photo mb-2">
+              <!-- Put your headshot in the same folder and name it your-photo.jpg,
+                   or replace src with a URL. -->
+              <img src="pics/mihai-nicola2.jpg" alt="Photo of Mihai Nicola" class="img-fluid" />
+            </div>
+            <div class="links">
+              <a href="cv.pdf">CV (PDF)</a>
+              <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" rel="noopener">ORCID</a>
+              <a href="https://scholar.google.com/citations?user=-IU5sTgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-8">
+            <h2>About me</h2>
+            <p>
+              I am a PhD candidate at Stevens Institute of Technology, advised by Eric Koskinen and Tegan Brennan. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
+            </p>
+            <p>
+              Before beginning my PhD, I spent a decade as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU AFTER ABOUT -->
+      <section aria-label="Page sections" class="pt-2 pb-3">
+        <nav class="main-nav d-flex flex-wrap gap-2">
+          <a href="#about">About me</a>
+          <a href="#pubs">Publications</a>
+          <a href="#activities">Activities</a>
+          <a href="#misc">Miscellaneous</a>
+        </nav>
       </section>
 
       <section id="pubs">
         <h2>Publications</h2>
         <ul>
           <li>
-            <span class="pub-title">Abstract Interpretation of Temporal Safety Effects of Higher Order Programs</span>. <strong>Mihai Nicola</strong>, Chaitanya Agarwal, Eric Koskinen, Thomas Wies
-            <em>OOPSLA 2025 </em>, Year.
-            <span class="muted">[<a href="papers/interpeffects.pdf" target="_blank" rel="noopener">PDF</a>]
-            [<a href="#" target="_blank" rel="noopener">DOI</a>]</span>
+            <span class="pub-title">Abstract Interpretation of Temporal Safety Effects of Higher Order Programs</span>.
+            <strong>Mihai Nicola</strong>, Chaitanya Agarwal, Eric Koskinen, Thomas Wies.
+            <em>OOPSLA 2025</em>.
+            <span class="muted">
+              [<a href="papers/interpeffects.pdf" target="_blank" rel="noopener">PDF</a>]
+              [<a href="#" target="_blank" rel="noopener">DOI</a>]
+            </span>
           </li>
           <li>
             <strong>Another Paper Title</strong>. Your Name, Coauthor.
             <em>Venue</em>, Year.
-            <span class="muted">[<a href="#" target="_blank" rel="noopener">arXiv</a>]</span>
+            <span class="muted">
+              [<a href="#" target="_blank" rel="noopener">arXiv</a>]
+            </span>
           </li>
         </ul>
         <p class="muted">
@@ -212,7 +207,7 @@ Before beginning my PhD, I spent a decade as a consultant for the United Nations
     </main>
 
     <footer>
-      <div>© <span id="year"></span> Your Name</div>
+      <div>© <span id="year"></span> Mihai Nicola</div>
     </footer>
   </div>
 
