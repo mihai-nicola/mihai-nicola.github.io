@@ -126,7 +126,25 @@
 	/* background:#fafafa; */ 
     }
 
-    @media only screen and (max-width: 540px) {
+    /* Custom vertical separator */
+    .btn-divider {
+	width: 1px;
+	height: 1.5rem;
+	background-color: #dee2e6; /* Bootstrap's border-gray color */
+	align-self: center;
+	}
+
+	 /* Icon hover effect: moves icon up slightly */
+	 .icon-move-btn i {
+	     transition: transform 0.2s ease-in-out;
+	     display: inline-block; /* Required for transform to work */
+	 }
+
+	 .icon-move-btn:hover i {
+	     transform: translateY(-2px); /* Moves icon 4px up */
+	 }
+    
+    @media only screen and (max-width: 576px) {
 	img.photo {
 	    width: 100px;
 	    height: 100px;
@@ -146,15 +164,48 @@
 
 <body>
   
-  <header>
+  <!-- <header> -->
+  <!--   <div class="container-lg px-3"> -->
+  <!--     <div class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> -->
+  <!-- 	<h1 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Mihai Nicola</h1> -->
+  <!--     </div> -->
+  <!--   </div> -->
+    <!-- </header> -->
+
+  <header class="border-bottom mb-4">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-lg px-3">
-      <div class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-	<h1 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Mihai Nicola</h1>
+      <!-- Name/Brand -->
+      <h1 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Mihai Nicola</h1>
+
+      <!-- Hamburger Button (aligned right by default in flexbox) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu Items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto py-2 py-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#activities">Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#misc">Misc</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
+</header>
+
  
-  <main>
+  <Main>
     <div class="container-lg">
       <!-- ABOUT + PHOTO (side-by-side on md+, stacked on small screens) -->
       <section id="about">
@@ -165,37 +216,37 @@
                    or replace src with a URL. -->
               <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-thumbnail float-start photo" />
             </div>
-	    <div class="vstack gap-1 clearfix">
-	      <!-- Email Link -->
-	      <a href="lnicola@stevens.edu" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-		<i class="bi bi-envelope me-3"></i>
-		Email
-	      </a>
+	    <!-- <div class="vstack gap-1 clearfix"> -->
+	    <!--   <\!-- Email Link -\-> -->
+	    <!--   <a href="lnicola@stevens.edu" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+	    <!-- 	<i class="bi bi-envelope me-3"></i> -->
+	    <!-- 	Email -->
+	    <!--   </a> -->
 
-	      <!-- GitHub Link -->
-	      <a href="github.com" target="_blank" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-		<i class="bi bi-github me-3"></i>
-		GitHub
-	      </a>
+	    <!--   <\!-- GitHub Link -\-> -->
+	    <!--   <a href="github.com" target="_blank" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+	    <!-- 	<i class="bi bi-github me-3"></i> -->
+	    <!-- 	GitHub -->
+	    <!--   </a> -->
 
-	      <!-- Google Scholar Link -->
-	      <a href="scholar.google.com" target="_blank" id="a_google_scholar" class="d-flex align-items-center p-2 text-wrap" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0)">
-		<i class="ai ai-google-scholar me-3"></i>
-		<span>Google Scholar</span>
-	      </a>
+	    <!--   <\!-- Google Scholar Link -\-> -->
+	    <!--   <a href="scholar.google.com" target="_blank" id="a_google_scholar" class="d-flex align-items-center p-2 text-wrap" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0)"> -->
+	    <!-- 	<i class="ai ai-google-scholar me-3"></i> -->
+	    <!-- 	<span>Google Scholar</span> -->
+	    <!--   </a> -->
 
-	      <!-- ORCID -->
-	      <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-		<i class="ai ai-orcid me-3"></i>
-		ORCID
-	      </a>
+	    <!--   <\!-- ORCID -\-> -->
+	    <!--   <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+	    <!-- 	<i class="ai ai-orcid me-3"></i> -->
+	    <!-- 	ORCID -->
+	    <!--   </a> -->
 	      
-	      <!-- CV Link -->
-	      <a href="link/to/your/cv.pdf" target="_blank" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-		<i class="bi bi-file-earmark-person me-3"></i>
-		CV
-	      </a>
-	    </div>
+	    <!--   <\!-- CV Link -\-> -->
+	    <!--   <a href="link/to/your/cv.pdf" target="_blank" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+	    <!-- 	<i class="bi bi-file-earmark-person me-3"></i> -->
+	    <!-- 	CV -->
+	    <!--   </a> -->
+	    <!-- </div> -->
           </div>
 
           <div class="col">
@@ -203,52 +254,90 @@
             <p class="fs-5">
               I am 5th year PhD student at <a href="https://www.stevens.edu/" target="_blank">Stevens Institute of Technology</a>, advised by <a href="https://www.erickoskinen.com/" target="_blank">Eric Koskinen</a> and <a href="https://www.stevens.edu/profile/tbrenna5" target="_blank">Tegan Brennan</a>. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
             </p>
-            <p class="fs-5">
-              Before beginning my PhD, I spent time as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
-            </p>
+            <!-- <p class="fs-5"> -->
+            <!--   Before beginning my PhD, I spent time as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms. -->
+            <!-- </p> -->
+	    
 	    <!-- Use flex-column (mobile) and flex-md-row (tablets/desktop) -->
 <!-- gap-md-4 adds horizontal space, gap-2 adds vertical space when stacked -->
-<div class="d-flex flex-column flex-md-row gap-2 gap-md-4 clearfix">
+<!-- <div class="d-flex flex-md-row gap-2 gap-md-4 clearfix"> -->
   
-  <!-- Email Link -->
-  <a href="mailto:lnicola@stevens.edu" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-    <i class="bi bi-envelope me-2"></i> Email
+<!--   <\!-- Email Link -\-> -->
+<!--   <a href="mailto:lnicola@stevens.edu" class="d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+<!--     <i class="bi bi-envelope me-2"></i> Email -->
+<!--   </a> -->
+
+<!--   <\!-- GitHub Link -\-> -->
+<!--   <a href="https://github.com" target="_blank" class="d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+<!--     <i class="bi bi-github me-2"></i> GitHub -->
+<!--   </a> -->
+
+<!--   <\!-- Google Scholar Link -\-> -->
+<!--   <a href="https://scholar.google.com" target="_blank" class="d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+<!--     <i class="ai ai-google-scholar me-2"></i> Google Scholar -->
+<!--   </a> -->
+
+<!--   <\!-- ORCID -\-> -->
+<!--   <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" class="d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+<!--     <i class="ai ai-orcid me-2"></i> ORCID -->
+<!--   </a> -->
+  
+<!--   <\!-- CV Link -\-> -->
+<!--   <a href="link/to/your/cv.pdf" target="_blank" class="d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"> -->
+<!--     <i class="bi bi-file-earmark-person me-2"></i> CV -->
+<!--   </a> -->
+			<!-- </div> -->
+
+	    <div class="d-flex flex-wrap align-items-center gap-1">
+  
+  <!-- Email -->
+  <a href="mailto:lnicola@stevens.edu" class="btn btn-light d-flex align-items-center icon-move-btn">
+    <i class="bi bi-envelope me-2"></i> <span class="d-none d-sm-inline ms-2">Email</span>
   </a>
 
-  <!-- GitHub Link -->
-  <a href="https://github.com" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-    <i class="bi bi-github me-2"></i> GitHub
+  <div class="btn-divider"></div>
+
+  <!-- GitHub -->
+  <a href="https://github.com" target="_blank" class="btn btn-light d-flex align-items-center icon-move-btn">
+    <i class="bi bi-github me-2"></i> <span class="d-none d-sm-inline ms-2">GitHub</span>
   </a>
 
-  <!-- Google Scholar Link -->
-  <a href="https://scholar.google.com" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-    <i class="ai ai-google-scholar me-2"></i> Google Scholar
+  <div class="btn-divider"></div>
+
+  <!-- Google Scholar -->
+  <a href="https://scholar.google.com" target="_blank" class="btn btn-light d-flex align-items-center icon-move-btn">
+    <i class="ai ai-google-scholar me-2"></i><span class="d-none d-sm-inline ms-2"> Google Scholar</span>
   </a>
+
+  <div class="btn-divider"></div>
 
   <!-- ORCID -->
-  <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-    <i class="ai ai-orcid me-2"></i> ORCID
+  <a href="orcid.org" target="_blank" class="btn btn-light d-flex align-items-center icon-move-btn">
+    <i class="ai ai-orcid me-2"></i> <span class="d-none d-sm-inline ms-2">ORCID</span>
   </a>
   
-  <!-- CV Link -->
-  <a href="link/to/your/cv.pdf" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
-    <i class="bi bi-file-earmark-person me-2"></i> CV
+  <div class="btn-divider"></div>
+
+  <!-- CV -->
+  <a href="link/to/your/cv.pdf" target="_blank" class="btn btn-light d-flex align-items-center icon-move-btn">
+    <i class="bi bi-file-earmark-person me-2"></i> <span class="d-none d-sm-inline ms-2">CV</span>
   </a>
 </div>
+
 
           </div>
         </div>
       </section>
 
-      <!-- MENU AFTER ABOUT -->
-      <section aria-label="Page sections" class="pt-2 pb-3">
-        <nav class="main-nav d-flex flex-wrap gap-2">
-          <a href="#about">About me</a>
-          <a href="#pubs">Publications</a>
-          <a href="#activities">Activities</a>
-          <a href="#misc">Miscellaneous</a>
-        </nav>
-      </section>
+      <!-- <\!-- MENU AFTER ABOUT -\-> -->
+      <!-- <section aria-label="Page sections" class="pt-2 pb-3"> -->
+      <!--   <nav class="main-nav d-flex flex-wrap gap-2"> -->
+      <!--     <a href="#about">About me</a> -->
+      <!--     <a href="#pubs">Publications</a> -->
+      <!--     <a href="#activities">Activities</a> -->
+      <!--     <a href="#misc">Miscellaneous</a> -->
+      <!--   </nav> -->
+      <!-- </section> -->
 
       <section id="pubs">
         <h2 class="h3">Publications</h2>
@@ -305,5 +394,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <!-- Place the JS bundle here -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
