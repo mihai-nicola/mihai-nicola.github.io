@@ -162,11 +162,11 @@
                    or replace src with a URL. -->
               <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-thumbnail float-start photo" />
             </div>
-            <!-- <div class="links clearfix"> -->
-            <!--   <a href="cv.pdf">CV</a> -->
-            <!--   <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" rel="noopener">ORCID</a> -->
-            <!--   <a href="https://scholar.google.com/citations?user=-IU5sTgAAAAJ" target="_blank" rel="noopener">Google Scholar</a> -->
-            <!-- </div> -->
+            <div class="links clearfix">
+              <a href="cv.pdf">CV</a>
+              <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" rel="noopener">ORCID</a>
+              <a href="https://scholar.google.com/citations?user=-IU5sTgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+            </div>
 	    <div class="vstack gap-1 clearfix">
 	      <!-- Email Link -->
 	      <a href="lnicola@stevens.edu" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
@@ -183,7 +183,7 @@
 	      <!-- Google Scholar Link -->
 	      <a href="scholar.google.com" target="_blank" class="d-flex align-items-center p-2" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
 		<i class="ai ai-google-scholar me-3"></i>
-		Google Scholar
+		<span>Google Scholar</span>
 	      </a>
 
 	      <!-- ORCID -->
@@ -208,6 +208,36 @@
             <p class="fs-5">
               Before beginning my PhD, I spent time as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
             </p>
+	    <!-- Use flex-column (mobile) and flex-md-row (tablets/desktop) -->
+<!-- gap-md-4 adds horizontal space, gap-2 adds vertical space when stacked -->
+<div class="d-flex flex-column flex-md-row gap-2 gap-md-4 clearfix">
+  
+  <!-- Email Link -->
+  <a href="mailto:lnicola@stevens.edu" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
+    <i class="bi bi-envelope me-2"></i> Email
+  </a>
+
+  <!-- GitHub Link -->
+  <a href="https://github.com" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
+    <i class="bi bi-github me-2"></i> GitHub
+  </a>
+
+  <!-- Google Scholar Link -->
+  <a href="https://scholar.google.com" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
+    <i class="ai ai-google-scholar me-2"></i> Google Scholar
+  </a>
+
+  <!-- ORCID -->
+  <a href="https://orcid.org/0000-0003-0204-1626" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
+    <i class="ai ai-orcid me-2"></i> ORCID
+  </a>
+  
+  <!-- CV Link -->
+  <a href="link/to/your/cv.pdf" target="_blank" class="text-decoration-none d-flex align-items-center" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);">
+    <i class="bi bi-file-earmark-person me-2"></i> CV
+  </a>
+</div>
+
           </div>
         </div>
       </section>
