@@ -14,124 +14,125 @@
     crossorigin="anonymous"
   />
 
-  <style>
-    :root{
-      --text:#111;
-      --muted:#555;
-      --border:#e6e6e6;
-      --bg:#fff;
-      --link:#0b57d0;
-    }
-    * { box-sizing: border-box; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.55;
-    }
-    .wrap{
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 28px 18px 60px;
-    }
-    header{
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 12px;
-    }
-    h1{
-      font-size: 2rem;
-      margin: 0;
-      letter-spacing: -0.02em;
-    }
+  <!-- <style> -->
+  <!--   :root{ -->
+  <!--     --text:#111; -->
+  <!--     --muted:#555; -->
+  <!--     --border:#e6e6e6; -->
+  <!--     --bg:#fff; -->
+  <!--     --link:#0b57d0; -->
+  <!--   } -->
+  <!--   * { box-sizing: border-box; } -->
+  <!--   body{ -->
+  <!--     margin:0; -->
+  <!--     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; -->
+  <!--     color:var(--text); -->
+  <!--     background:var(--bg); -->
+  <!--     line-height:1.55; -->
+  <!--   } -->
+  <!--   .wrap{ -->
+  <!--     max-width: 760px; -->
+  <!--     margin: 0 auto; -->
+  <!--     padding: 28px 18px 60px; -->
+  <!--   } -->
+  <!--   /* header{ */ -->
+  <!--   /*   padding-bottom: 18px; */ -->
+  <!--   /*   border-bottom: 1px solid var(--border); */ -->
+  <!--   /*   margin-bottom: 12px; */ -->
+  <!--   /* } */ -->
+  <!--   /* h1{ */ -->
+  <!--   /*   font-size: 2rem; */ -->
+  <!--   /*   margin: 0; */ -->
+  <!--   /*   letter-spacing: -0.02em; */ -->
+  <!--   /* } */ -->
 
-    .photo img{
-      width: 200px;
-      height: 200px;
-      border-radius: 14px;
-      object-fit: cover;
-      border: 1px solid var(--border);
-      display:block;
-      background:#fafafa;
-    }
-    .links{
-      margin-top: 10px;
-      display:flex;
-      flex-direction:column;
-      gap: 6px;
-      font-size: 0.98rem;
-    }
-    .links a{
-      color: var(--link);
-      text-decoration: none;
-    }
-    .links a:hover{ text-decoration: underline; }
+  <!--   .photo img{ -->
+  <!--     width: 200px; -->
+  <!--     height: 200px; -->
+  <!--     border-radius: 14px; -->
+  <!--     object-fit: cover; -->
+  <!--     border: 1px solid var(--border); -->
+  <!--     display:block; -->
+  <!--     background:#fafafa; -->
+  <!--   } -->
+  <!--   .links{ -->
+  <!--     margin-top: 10px; -->
+  <!--     display:flex; -->
+  <!--     flex-direction:column; -->
+  <!--     gap: 6px; -->
+  <!--     font-size: 0.98rem; -->
+  <!--   } -->
+  <!--   .links a{ -->
+  <!--     color: var(--link); -->
+  <!--     text-decoration: none; -->
+  <!--   } -->
+  <!--   .links a:hover{ text-decoration: underline; } -->
 
-    .muted{ color: var(--muted); }
+  <!--   .muted{ color: var(--muted); } -->
 
-    section{
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    section:last-of-type{ border-bottom: none; }
-    h2{
-      font-size: 1.25rem;
-      margin: 0 0 10px;
-      letter-spacing: -0.01em;
-    }
-    ul{
-      margin: 8px 0 0;
-      padding-left: 18px;
-    }
-    li{ margin: 8px 0; }
+  <!--   section{ -->
+  <!--     padding: 18px 0; -->
+  <!--     border-bottom: 1px solid var(--border); -->
+  <!--   } -->
+  <!--   section:last-of-type{ border-bottom: none; } -->
+  <!--   /* h2{ */ -->
+  <!--   /*   font-size: 1.25rem; */ -->
+  <!--   /*   margin: 0 0 10px; */ -->
+  <!--   /*   letter-spacing: -0.01em; */ -->
+  <!--   /* } */ -->
+  <!--   ul{ -->
+  <!--     margin: 8px 0 0; -->
+  <!--     padding-left: 18px; -->
+  <!--   } -->
+  <!--   li{ margin: 8px 0; } -->
 
-    footer{
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+  <!--   footer{ -->
+  <!--     margin-top: 18px; -->
+  <!--     color: var(--muted); -->
+  <!--     font-size: 0.9rem; -->
+  <!--   } -->
 
-    /* Make anchors scroll nicely under browser UI */
-    html { scroll-behavior: smooth; }
-    section { scroll-margin-top: 18px; }
+  <!--   /* Make anchors scroll nicely under browser UI */ -->
+  <!--   html { scroll-behavior: smooth; } -->
+  <!--   section { scroll-margin-top: 18px; } -->
 
-    /* Simple pill-style nav buttons */
-    .main-nav a{
-      color: var(--link);
-      text-decoration:none;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-      font-size: 0.95rem;
-      display:inline-block;
-    }
-    .main-nav a:hover{
-      text-decoration: underline;
-    }
-  </style>
+  <!--   /* Simple pill-style nav buttons */ -->
+  <!--   .main-nav a{ -->
+  <!--     color: var(--link); -->
+  <!--     text-decoration:none; -->
+  <!--     padding: 6px 12px; -->
+  <!--     border: 1px solid var(--border); -->
+  <!--     border-radius: 999px; -->
+  <!--     background:#fff; -->
+  <!--     font-size: 0.95rem; -->
+  <!--     display:inline-block; -->
+  <!--   } -->
+  <!--   .main-nav a:hover{ -->
+  <!--     text-decoration: underline; -->
+  <!--   } -->
+  <!-- </style> -->
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <h1 class="mb-2">Mihai Nicola</h1>
-      <p class="muted mb-0">
-        PhD Student • Programming Languages / Formal Methods<br/>
-        Stevens Institute of Technology
-      </p>
-    </header>
-
+  
+  <header>
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+	<h1 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Mihai Nicola</h1>
+      </div>
+    </div>
+  </header>
+  
     <main>
+      <div class="container">
       <!-- ABOUT + PHOTO (side-by-side on md+, stacked on small screens) -->
       <section id="about">
         <div class="row g-3 align-items-start">
           <div class="col-12 col-md-4 d-flex flex-column align-items-start">
-            <div class="photo mb-2">
+            <div class="img-fluid mb-2">
               <!-- Put your headshot in the same folder and name it your-photo.jpg,
                    or replace src with a URL. -->
-              <img src="pics/mihai-nicola2.jpg" alt="Photo of Mihai Nicola" class="img-fluid" />
+              <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-fluid" />
             </div>
             <div class="links">
               <a href="cv.pdf">CV (PDF)</a>
@@ -142,10 +143,10 @@
 
           <div class="col-12 col-md-8">
             <h2>About me</h2>
-            <p>
+            <p class="lead">
               I am a PhD candidate at Stevens Institute of Technology, advised by Eric Koskinen and Tegan Brennan. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
             </p>
-            <p>
+            <p class="lead">
               Before beginning my PhD, I spent a decade as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
             </p>
           </div>
@@ -204,12 +205,14 @@
           <li>Other: hobbies, notes, or lightweight personal items.</li>
         </ul>
       </section>
+      </div>
     </main>
 
     <footer>
-      <div>© <span id="year"></span> Mihai Nicola</div>
+      <div class="containe">
+	<div>© <span id="year"></span> Mihai Nicola</div>
+      </div>
     </footer>
-  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
