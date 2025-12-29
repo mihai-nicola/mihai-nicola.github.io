@@ -128,11 +128,11 @@
       <!-- ABOUT + PHOTO (side-by-side on md+, stacked on small screens) -->
       <section id="about">
         <div class="row g-3 align-items-start">
-          <div class="col-12 col-md-4 d-flex flex-column align-items-start">
+          <div class="col-12 col-md-3 d-flex flex-column align-items-start">
             <div class="img-fluid mb-2">
               <!-- Put your headshot in the same folder and name it your-photo.jpg,
                    or replace src with a URL. -->
-              <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-fluid" />
+              <img src="pics/mihai-nicola3.jpg" alt="Photo of Mihai Nicola" class="img-fluid rounded" />
             </div>
             <div class="links">
               <a href="cv.pdf">CV (PDF)</a>
@@ -141,13 +141,13 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-8">
+          <div class="col-12 col-md-9">
             <h2>About me</h2>
             <p class="lead">
-              I am a PhD candidate at <a href="https://www.stevens.edu/" target="_blank">Stevens Institute of Technology</a>, advised by <a href="https://www.erickoskinen.com/" target="_blank">Eric Koskinen</a> and <a href="https://www.stevens.edu/profile/tbrenna5" target="_blank">Tegan Brennan</a>. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
+              I am 5th year PhD student at <a href="https://www.stevens.edu/" target="_blank">Stevens Institute of Technology</a>, advised by <a href="https://www.erickoskinen.com/" target="_blank">Eric Koskinen</a> and <a href="https://www.stevens.edu/profile/tbrenna5" target="_blank">Tegan Brennan</a>. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
             </p>
             <p class="lead">
-              Before beginning my PhD, I spent a decade as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
+              Before beginning my PhD, I spent time as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
             </p>
           </div>
         </div>
@@ -165,6 +165,7 @@
 
       <section id="pubs">
         <h2>Publications</h2>
+	
         <ul>
           <li>
             <span class="pub-title">Abstract Interpretation of Temporal Safety Effects of Higher Order Programs</span>.
@@ -208,9 +209,9 @@
       </div>
     </main>
 
-    <footer>
-      <div class="containe">
-	<div>© <span id="year"></span> Mihai Nicola</div>
+    <footer class="bd-footer py-3 mt-5 bg-light">
+      <div class="container">
+	<div>© <span id="year py-5"></span> Mihai Nicola</div>
       </div>
     </footer>
 
