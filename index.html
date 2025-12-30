@@ -46,22 +46,29 @@
      .icon-move-btn:hover i {
 	 transform: translateY(-2px); /* Moves icon 4px up */
      }
+
+     @media (min-width: 992px) {
+	 .container-lg {
+	     max-width: 960px;
+	 }
+     }
+     
+     @media only screen and (max-width: 576px) {
+	 img.photo {
+	     width: 100px;
+	     height: 100px;
+	 }
+	 .links {
+	     width: 100px;
+	 }
+	 p.fs-5 {
+	     font-size: 1rem !important;
+	 }
+	 #a_google_scholar {
+	     max-width: 100px;
+	 }	
+     }
     
-    @media only screen and (max-width: 576px) {
-	img.photo {
-	    width: 100px;
-	    height: 100px;
-	}
-	.links {
-	    width: 100px;
-	}
-	p.fs-5 {
-	    font-size: 1rem !important;
-	}
-	#a_google_scholar {
-	    max-width: 100px;
-	}	
-    }
   </style>
 </head>
 
@@ -119,7 +126,7 @@
               I am 5th year PhD student at <a href="https://www.stevens.edu/" target="_blank">Stevens Institute of Technology</a>, advised by <a href="https://www.erickoskinen.com/" target="_blank">Eric Koskinen</a> and <a href="https://www.stevens.edu/profile/tbrenna5" target="_blank">Tegan Brennan</a>. My work applies formal methods to reason about program correctness, with particular interest in programming languages, automated analysis and verification techniques, and concurrency.
             </p>
             <p class="fs-5">
-              Before beginning my PhD, I spent time as a consultant for the United Nations in Geneva, focusing on the design and development of distributed systems for e-government platforms.
+              Before beginning my PhD, I spent time as a consultant for the United Nations in Geneva (Switzerland), focusing on the design and development of distributed systems for e-government platforms.
             </p>
 	    <div class="d-flex flex-wrap align-items-center gap-1 mt-4">
   
@@ -286,15 +293,6 @@
 	
       </section>
       
-      
-      <!-- <section id="misc"> -->
-      <!--   <h2 class="h3">Miscellaneous</h2> -->
-      <!--   <ul> -->
-      <!--     <li>Teaching: Course, term, role.</li> -->
-      <!--     <li>Open-source: Project link, short description.</li> -->
-      <!--     <li>Other: hobbies, notes, or lightweight personal items.</li> -->
-      <!--   </ul> -->
-      <!-- </section> -->
       </div>
     </main>
 
