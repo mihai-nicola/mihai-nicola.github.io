@@ -101,9 +101,10 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStartNoInd}{\begin{itemize}[leftmargin=*, label={}]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -134,7 +135,7 @@ My research aims to advance software reliability. In my work I apply formal meth
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Stevens Institute of Technology}{NJ, USA}
+{Stevens Institute of Technology}{Hoboken, NJ}
 {Ph.D. in Computer Science}{Sept 2021 - Present}
 \resumeSubheading
 {Politehnica University}{Bucharest, Romania}
@@ -143,46 +144,64 @@ My research aims to advance software reliability. In my work I apply formal meth
 {Faculty of Cybernetics, ASE}{Bucharest, Romania}
 {B.S. in Economic Informatics}{Sept 2000 - Jun 2005}
 \resumeSubHeadingListEnd
-
+\vspace{0.1em}
 
 \section{Publications}
 \textbf{Nicola, M.}, Agarwal, C., Koskinen, E., \& Wies, T. (2025). Abstract Interpretation of Temporal Safety Effects of Higher Order Programs. Proceedings of the ACM on Programming Languages, 9(OOPSLA2), 2511-2539.
 \\[1em]
 
 Chen, A., Fathololumi, P., \textbf{Nicola, M.}, Pincus, J., Brennan, T., \& Koskinen, E. (2023, October). Better predicates and heuristics for improved commutativity synthesis. In International Symposium on Automated Technology for Verification and Analysis (pp. 93-113). Cham: Springer Nature Switzerland.
+\vspace{0.1em}
 
 \section{Teaching experience}
 \resumeSubHeadingListStart
 \resumeSubheadingLight{Teaching Assistant}{Stevens Institute of Technology}
 
-\resumeItemListStart
+\resumeItemListStartNoInd
 \resumeItem{Compiler Design. Spring 2024, Spring 2025}
 \resumeItem{Concurrent Programming. Fall 2025}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+\vspace{0.1em}
 
+\section{Awards \& Honors}
+\textbf{Provost Doctoral Fellowship}. Stevens Institute of Technology (2021)
+\vspace{0.1em}
+
+\section{Talks}
+Automated Refinement of Concurrent Object Quotients. \underline{\href{https://netys.net/workshop2025/vds2025.html}{VDS 2025}}
+\\[0.1em]
+Inferring Dependent Types and Effects through Abstract Interpretation
+\underline{\href{http://www.njpls.org/may2024.html}{NJPLS May 2024}}
+\vspace{0.1em}
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Software architect}{2019 -- 2021}
+{Domain Software Architect}{2019 -- 2021}
 {ING Bank}{Bucharest, Romania}
-\resumeItemListStart
-\resumeItem{Design software solutions targeting batch and real time
-  integration of in-house and commercial-off-the-shelf software for bid data processing}
-\resumeItem{Analyze and improve operational architectural characteristics, such as availability, reliability, performance}
+\resumeItemListStartNoInd
+%\resumeItem{Design software solutions targeting batch and real time
+%  integration of in-house and commercial-off-the-shelf software for big data processing.
+%  Analyze and improve operational architectural characteristics, such as availability, reliability, performance}
+% \resumeItem{Design and validation of reliability-critical systems, focusing on correctness and reliability, and guiding development teams to ensure safety within the availability constraints}
+\resumeItem{Design and validation of reliability-critical systems, focusing on correctness, and guiding development teams to ensure safety under availability constraints.}
+%\resumeItem{Architectural oversight of mission-critical banking systems, focusing on requirements formalization, correctness, and reliability constraints, and guiding implementation to preserve safety and consistency properties.}
 \resumeItemListEnd
 
 \resumeSubheading
-{Software Architect / Senior Software Engineer}{2011-2019}
+{Consultant / Senior Software Engineer}{2006-2019}
 {United Nations Conference on Trade and Development}{Geneva, Switzerland}
-\resumeItemListStart
-\resumeItem{Design and development of distributed systems for e-government platforms}
+\resumeItemListStartNoInd
+% \resumeItem{Design and development of distributed systems for e-government platforms}
+\resumeItem{Led the design and implementation of configurable, large-scale software systems for international trade and e-government platforms, deployed in more than 30 countries}
 \resumeItemListEnd
      
 \resumeSubHeadingListEnd
+
+*Additional industry positions omitted for brevity and available upon request.*
 
 
 % \section{Technical skills}
