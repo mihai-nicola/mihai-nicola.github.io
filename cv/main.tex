@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{bm}
 \input{glyphtounicode}
 
 
@@ -147,30 +148,13 @@ My research aims to advance software reliability. In my work I apply formal meth
 \vspace{0.1em}
 
 \section{Publications}
+\textbf{Nicola, M.}, Enea, C., \& Koskinen, E \emph{(under submission)}. Induction-Reduction Refinement for Concurrent Object Proofs.
+\\[1em]
+
 \textbf{Nicola, M.}, Agarwal, C., Koskinen, E., \& Wies, T. (2025). Abstract Interpretation of Temporal Safety Effects of Higher Order Programs. Proceedings of the ACM on Programming Languages, 9(OOPSLA2), 2511-2539.
 \\[1em]
 
 Chen, A., Fathololumi, P., \textbf{Nicola, M.}, Pincus, J., Brennan, T., \& Koskinen, E. (2023, October). Better predicates and heuristics for improved commutativity synthesis. In International Symposium on Automated Technology for Verification and Analysis (pp. 93-113). Cham: Springer Nature Switzerland.
-\vspace{0.1em}
-
-\section{Projects}
-\resumeSubHeadingListStart
-
-\resumeSubheadingLight{L$\forall\exists$N}{}
-\resumeItemListStartNoInd
-\resumeItem{AAA}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\section{Teaching experience}
-\resumeSubHeadingListStart
-\resumeSubheadingLight{Teaching Assistant}{Stevens Institute of Technology}
-
-\resumeItemListStartNoInd
-\resumeItem{Compiler Design. Spring 2024, Spring 2025}
-\resumeItem{Concurrent Programming. Fall 2025}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
 \vspace{0.1em}
 
 \section{Awards \& Honors}
@@ -183,6 +167,44 @@ Automated Refinement of Concurrent Object Quotients. \underline{\href{https://ne
 Inferring Dependent Types and Effects through Abstract Interpretation
 \underline{\href{http://www.njpls.org/may2024.html}{NJPLS May 2024}}
 \vspace{0.1em}
+
+\section{Teaching experience}
+\resumeSubHeadingListStart
+\resumeSubheadingLight{Teaching Assistant}{Stevens Institute of Technology}
+
+\resumeItemListStartNoInd
+\resumeItem{Compiler Design. Spring 2024, Spring 2025}
+\resumeItem{Concurrent Programming. Fall 2025}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{0.1em}
+
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheadingLight{Mechanization of Correctness Proofs for Concurrent Objects in $\mathsf{L\bm{\exists\forall}N}$}{}
+\resumeItemListStartNoInd
+\resumeItem{
+  Ongoing work exploring the mechanization and automation of safety proofs for lock-free concurrent objects.}
+\resumeItem{
+  Developing a compositional proof framework that derives trace quotients by combining partial-order reduction and Lipton's reduction via induction-reduction tuples capturing recurrent nonblocking synchronization patterns.}
+\resumeItem{
+  Demonstrating expressiveness by verifying canonical lock-free data structures, including a concurrent counter, Treiber Stack, Michael-Scott Queue, Elimination Stack.}
+\resumeItemListEnd
+
+\resumeSubheadingLight{$\bm{\mathsf{ev}}\mathsf{Drift}$: Static Analysis of Dependent Temporal Safety Effects of Functional Programs}{}
+\resumeItemListStartNoInd
+\resumeItem{Developed a scalable static analysis for automated verification of temporal safety properties over effect traces for a subset of OCaml, equipped with an $\mathsf{ev}$ expression that emits events as side effects}
+\resumeItem{Built an automata-based abstract interpreter for the trace extension operator $\mathsf{ev}$, integrating it into the abstract-interpretation-based dataflow refinement type inference tool $\mathsf{Drift}$}
+\resumeItem{Demonstrated improved scalability and performance compared to state-of-the-art automated safety verifiers}
+\resumeItemListEnd
+
+\resumeSubheadingLight{$\textsf{Servois2}$: Synthesis of commutativity conditions of data structure methods and code}{}
+\resumeItemListStartNoInd
+\resumeItem{Developed a model-counting-guided heuristic for predicate selection during synthesis, providing quantitative coverage criteria over the search space}
+\resumeItem{Supported rich logical fragments, including linear integer arithmetic (LIA) over bounded domains, and theories of strings, Booleans and arrays.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
